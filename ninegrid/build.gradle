@@ -1,5 +1,15 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.artifactId = 'ninegrid'
+            pom.groupId = 'com.zhenmei'
+            repository(url: 'file:///D:/p7i-android-library')
+            pom.version = "1.0.0"
+        }
+    }
+}
 android {
     compileSdkVersion 28
 

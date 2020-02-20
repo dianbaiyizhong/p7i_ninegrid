@@ -34,6 +34,9 @@ ext {
             "cardview"                     : "androidx.cardview:cardview:1.0.0",
             "RxKit"                        : "com.github.tamsiree.RxTool:RxKit:v2.4.1",
             "RxUI"                         : "com.github.tamsiree.RxTool:RxUI:v2.4.1",
+            "dialogplus"                   : "com.orhanobut:dialogplus:1.11@aar",
+            "slidinguppanel"               : "com.sothree.slidinguppanel:library:3.4.0",
+            "PhotoView"                    : "com.github.chrisbanes:PhotoView:2.3.0",
 
 
     ]
