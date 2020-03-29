@@ -1,8 +1,10 @@
 package com.zhenmei.p7i.ninegrid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -15,6 +17,9 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.zhenmei.p7i.ninegrid.round.RoundNineGridView;
+import com.zhenmei.p7i.ninegrid.round.preview.RoundImagePreviewActivity;
+
+import java.io.Serializable;
 
 
 public class GlideImageLoader implements RoundNineGridView.ImageLoader {
@@ -23,6 +28,7 @@ public class GlideImageLoader implements RoundNineGridView.ImageLoader {
         RequestOptions options = new RequestOptions()
                 .placeholder(R.mipmap.ic_launcher).error(R.mipmap.ic_launcher)
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC);
+
         Glide.with(context).load(url).apply(options)
                 .listener(new RequestListener<Drawable>() {
                     @Override
@@ -37,6 +43,7 @@ public class GlideImageLoader implements RoundNineGridView.ImageLoader {
                     }
                 })
                 .into(imageView);
+
 
     }
 
